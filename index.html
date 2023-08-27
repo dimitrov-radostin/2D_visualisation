@@ -1,17 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
     <title>Document</title>
 </head>
+
 <body>
 
-    <p>Drawing a spiral </p>
-    <canvas id="c", width="700", height="300">
+    <h1>Drawing a paramitrized spiral </h1>
+    <p>
+        Equation of Archimedean spiral in polar coordinates: \(r = k \theta \)
+    </p>
+
+    <p>
+        Where <b> \(k\) corresponds to the distance between loops</b> (for \(\theta \gt 2 \pi\))
+    </p>
+
+    <div>
+      Enter parameter \(2 \pi k = \) <input id="k_param" type="number" value="10" width="auto"> px
+    </div>
+
+    <div>
+        Direction
+    </div>
+
+    <div>
+        Inital distance from center <input id="inital distance" type="number" value="0" width="auto"> px
+    </div>
+
+<button id="start_button"> Restart (or press space)</button>
+
+    <canvas id="c" , width="720" , height="480">
 
     </canvas>
+
+    <p>
+        When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+    </p>
+
 </body>
 <script src="./main.js"></script>
+
 </html>
